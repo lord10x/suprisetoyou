@@ -39,7 +39,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0,0,0,0.4);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -67,17 +67,9 @@
 
 <body>
 
-  <div class="slide show">
-    <img src="1.jpg">
-  </div>
-
-  <div class="slide">
-    <img src="2.jpg">
-  </div>
-
-  <div class="slide">
-    <img src="3.jpg">
-  </div>
+  <div class="slide show"><img src="1.jpg"></div>
+  <div class="slide"><img src="2.jpg"></div>
+  <div class="slide"><img src="3.jpg"></div>
 
   <div class="overlay">
     <h1>Happy Birthday ❤️</h1>
@@ -85,10 +77,9 @@
   </div>
 
   <script>
-    var slides = document.getElementsByClassName("slide");
-    var index = 0;
-
-    setInterval(function () {
+    let slides = document.getElementsByClassName("slide");
+    let index = 0;
+    setInterval(() => {
       slides[index].classList.remove("show");
       index = (index + 1) % slides.length;
       slides[index].classList.add("show");
