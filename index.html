@@ -1,99 +1,99 @@
-!DOCTYPE html
-html lang=en
-head
-  meta charset=UTF-8
-  meta name=viewport content=width=device-width, initial-scale=1.0
-  titleHappy Birthday ❤️title
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday ❤️</title>
 
-  style
+  <style>
     body {
-      margin 0;
-      height 100vh;
-      overflow hidden;
-      font-family Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
     }
 
     .slide {
-      position fixed;
-      top 0;
-      left 0;
-      width 100%;
-      height 100%;
-      opacity 0;
-      transition opacity 1s ease-in-out;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
     .slide img {
-      width 100%;
-      height 100%;
-      object-fit cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .slide.show {
-      opacity 1;
+      opacity: 1;
     }
 
     .overlay {
-      position fixed;
-      top 0;
-      left 0;
-      width 100%;
-      height 100%;
-      background rgba(0,0,0,0.4);
-      display flex;
-      flex-direction column;
-      justify-content center;
-      align-items center;
-      color white;
-      text-align center;
-      z-index 10;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      z-index: 10;
     }
 
     .overlay h1 {
-      font-size 3rem;
-      margin-bottom 20px;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
     .overlay a {
-      padding 15px 35px;
-      background #ff1493;
-      color white;
-      text-decoration none;
-      border-radius 30px;
-      font-size 18px;
+      padding: 15px 35px;
+      background: #ff1493;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 18px;
     }
-  style
-head
+  </style>
+</head>
 
-body
+<body>
 
-  div class=slide show
-    img src=1.jpg
-  div
+  <div class="slide show">
+    <img src="1.jpg">
+  </div>
 
-  div class=slide
-    img src=2.jpg
-  div
+  <div class="slide">
+    <img src="2.jpg">
+  </div>
 
-  div class=slide
-    img src=3.jpg
-  div
+  <div class="slide">
+    <img src="3.jpg">
+  </div>
 
-  div class=overlay
-    h1Happy Birthday ❤️h1
-    a href=memorylane.htmlEnter the Surprise 🎁a
-  div
+  <div class="overlay">
+    <h1>Happy Birthday ❤️</h1>
+    <a href="memorylane.html">Enter the Surprise 🎁</a>
+  </div>
 
-  script
-    var slides = document.getElementsByClassName(slide);
+  <script>
+    var slides = document.getElementsByClassName("slide");
     var index = 0;
 
     setInterval(function () {
-      slides[index].classList.remove(show);
+      slides[index].classList.remove("show");
       index = (index + 1) % slides.length;
-      slides[index].classList.add(show);
+      slides[index].classList.add("show");
     }, 3000);
-  script
+  </script>
 
-body
-html
+</body>
+</html>
